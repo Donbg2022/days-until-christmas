@@ -1,8 +1,10 @@
-console.log()
-
 
 const day = new Date()
-const xMas = new Date("12/25/2022")
+const year = day.getFullYear();
+const xMas = new Date(`12/25/${year}`)
+
+
+
 function howLong(){
   let timeDiff = xMas.getTime() - day.getTime() 
   let dayDiff = timeDiff / (1000 * 3600 * 24)
@@ -13,6 +15,7 @@ function howLong(){
 }
 
 howLong()
+
 
 
 const length = document.querySelector('#length')
